@@ -5,12 +5,16 @@ N,B = map(int,input().split())
 
 arr = [[ int(x) for x in input().split() ] for _ in range(N)]
 
+def slicingRow(arr1):
+    
+
 #행렬 arr1와 arr2를 곱함.
 def multiply(arr1,arr2):
+    for i in range(x1+N):
 
 
 
-
+multiply(arr,arr)
 
 # 행렬 A를 거듭제곱함.
 def pow(A,B):
