@@ -12,6 +12,9 @@ numlst = list(int(x) for x in input().split())
 visited = []
 cnt = 0
 
+
+
+
 def sumseq(num):
     global cnt,S
     #종료 조건
@@ -26,5 +29,6 @@ def sumseq(num):
         sumseq(i+1)
         visited.pop()
 
+print(visited)
 sumseq(0)
 print(cnt)

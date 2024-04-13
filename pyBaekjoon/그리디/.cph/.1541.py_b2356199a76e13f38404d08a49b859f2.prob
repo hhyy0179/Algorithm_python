@@ -1,0 +1,1 @@
+{"name":"Local: 1541","url":"/Users/jadesuiii/Algorithm_python/pyBaekjoon/그리디/1541.py","tests":[{"id":1712283008016,"input":"10+20+30+40","output":"100"},{"id":1712283012796,"input":"00009-00009","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/jadesuiii/Algorithm_python/pyBaekjoon/그리디/1541.py","group":"local","local":true}

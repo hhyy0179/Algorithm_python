@@ -7,24 +7,30 @@ N = int(input())
 #파이썬 입력 여러 방식
 
 arr = [[int(x) for x in input().split()] for y in range(N)]
-visited = [0 for i in range(N)]
+lst = [0]
+mincnt = 1e9
 
-def dfs(start,now,cnt,k):
-    if k == N-1:
-        print(now)
-        return
-
+def dfs(start,cnt):
+    global mincnt
+    if len(lst) == N:
+        st = lst[0]
+        ed = lst[-1]
+        if arr[ed][st]:
+            cnt += arr[ed][st]
+            mincnt = min(mincnt,cnt)
+        return 
+    
+    #1~4까지
     for i in range(N):
-        cost = arr[now][i]
-        print(f"arr[{now}][{i}] cost: {cost}")
-        if cost and not visited[i]:
-            visited[i] = True
-            print(visited)
-            print(f"함수 호출!: dfs({start},{i},{cnt+cost},{k+1})")
-            dfs(start,i,cnt+cost,k+1)
-            visited[i] = False
+        if i not in lst and arr[start][i]:
+            lst.append(i)
+            cnt += arr[start][i]
+            if cnt < mincnt:
+                dfs(i,cnt)
+            cnt -= arr[start][i]
+            lst.pop()
 
-visited[1] = True
-dfs(1,1,0,0)
+dfs(0,0)
+print(mincnt)
 
 
